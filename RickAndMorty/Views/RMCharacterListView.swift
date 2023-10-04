@@ -67,6 +67,7 @@ final class RMCharacterListView: UIView {
             spinner.heightAnchor.constraint(equalToConstant: 100),
             spinner.centerXAnchor.constraint(equalTo: centerXAnchor),
             spinner.centerYAnchor.constraint(equalTo: centerYAnchor),
+            
 
             collectionView.topAnchor.constraint(equalTo: topAnchor),
             collectionView.leftAnchor.constraint(equalTo: leftAnchor),
@@ -92,6 +93,12 @@ extension RMCharacterListView: RMCharacterListViewViewModelDelegate {
         collectionView.reloadData() // Initial fetch
         UIView.animate(withDuration: 0.4) {
             self.collectionView.alpha = 1
+        }
+    }
+
+    func didLoadMoreCharacters(with newIndexPath: [IndexPath]) {
+        collectionView.performBatchUpdates {
+            self.collectionView.insertItems(at: newIndexPath)
         }
     }
 }

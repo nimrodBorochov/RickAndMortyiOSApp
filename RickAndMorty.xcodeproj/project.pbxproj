@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F30861902ACDA30200DC3DEB /* RMImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F308618F2ACDA30200DC3DEB /* RMImageManager.swift */; };
 		F3CF56762ACAE4A4006F59DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CF56752ACAE4A4006F59DC /* AppDelegate.swift */; };
 		F3CF56782ACAE4A4006F59DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CF56772ACAE4A4006F59DC /* SceneDelegate.swift */; };
 		F3CF567F2ACAE4A5006F59DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3CF567E2ACAE4A5006F59DC /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F308618F2ACDA30200DC3DEB /* RMImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMImageManager.swift; sourceTree = "<group>"; };
 		F3CF56722ACAE4A4006F59DC /* RickAndMorty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickAndMorty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3CF56752ACAE4A4006F59DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3CF56772ACAE4A4006F59DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 		F3CF568E2ACAE4F9006F59DC /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				F308618F2ACDA30200DC3DEB /* RMImageManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				F3CF569C2ACAE559006F59DC /* RMSettingsViewController.swift in Sources */,
 				F3CF56942ACAE53D006F59DC /* RMCharacter.swift in Sources */,
 				F3CF56BC2ACC27D5006F59DC /* RMCharacterCollectionViewCellViewModel.swift in Sources */,
+				F30861902ACDA30200DC3DEB /* RMImageManager.swift in Sources */,
 				F3CF56A42ACB09AC006F59DC /* RMRequest.swift in Sources */,
 				F3CF56B42ACC1677006F59DC /* RMCharacterListViewViewModel.swift in Sources */,
 				F3CF56A02ACAE559006F59DC /* RMEpisodeViewController.swift in Sources */,
