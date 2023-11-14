@@ -40,6 +40,7 @@ final class RMCharacterEpisodeCollectionViewCell: UICollectionViewCell {
         contentView.layer.borderWidth = 2
         contentView.layer.borderColor = UIColor.systemBlue.cgColor
         contentView.addSubviews(seasonLabel, nameLabel, airDateLabel)
+        setUpConstraints()
     }
     
     required init?(coder: NSCoder) {
