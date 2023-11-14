@@ -20,11 +20,24 @@ final class RMEpisodeListViewViewModel: NSObject {
 
     private var isLoadingMoreEpisodes = false
 
+    private let borderColors: [UIColor] = [
+        .systemGreen,
+        .systemBlue,
+        .systemOrange,
+        .systemPink,
+        .systemPurple,
+        .systemRed,
+        .systemYellow,
+        .systemIndigo,
+        .systemMint
+    ]
+
     private var episodes: [RMEpisode] = [] {
         didSet {
             for episode in episodes {
                 let viewModel = RMCharacterEpisodeCollectionViewCellViewModel(
-                    episodeDataUrl: URL(string: episode.url)
+                    episodeDataUrl: URL(string: episode.url),
+                    borderColor: borderColors.randomElement() ?? .systemBlue
                 )
                 if !cellViewModels.contains(viewModel) {
                     cellViewModels.append(viewModel)
@@ -61,7 +74,7 @@ final class RMEpisodeListViewViewModel: NSObject {
     }
 
     /// Paginate if additional episodes are needed
-    public func fetchAdditionalCharacters(url: URL) {
+    public func fetchAdditionalEpisodes(url: URL) {
         guard !isLoadingMoreEpisodes else { return }
         isLoadingMoreEpisodes = true
         guard let request = RMRequest(url: url) else {
@@ -126,12 +139,12 @@ extension RMEpisodeListViewViewModel: UICollectionViewDataSource, UICollectionVi
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let bounds = UIScreen.main.bounds
+        let bounds = collectionView.bounds
 
-        let width = (bounds.width - 30) / 2
+        let width = bounds.width - 20
         return CGSize(
             width: width,
-            height: width * 0.8
+            height: 100
         )
     }
 
@@ -183,7 +196,7 @@ extension RMEpisodeListViewViewModel: UIScrollViewDelegate {
             let totalScrollViewFixedHeight = scrollView.frame.size.height
 
             if offset >= (totalContentHeight - totalScrollViewFixedHeight - 120) { // 100 footer height, 20 "buffer"
-                self.fetchAdditionalCharacters(url: url)
+                self.fetchAdditionalEpisodes(url: url)
             }
             t.invalidate()
         }
