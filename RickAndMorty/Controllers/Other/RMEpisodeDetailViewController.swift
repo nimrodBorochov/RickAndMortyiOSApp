@@ -17,7 +17,7 @@ final class RMEpisodeDetailViewController: UIViewController {
     // MARK: - Init
 
     init(url: URL?) {
-        self.viewModel = .init(endpointUrl: url)
+        self.viewModel = RMEpisodeDetailViewViewModel(endpointUrl: url)
 
         super.init(nibName: nil, bundle: nil)
     }
@@ -35,6 +35,9 @@ final class RMEpisodeDetailViewController: UIViewController {
         title = "Episode"
 
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(didTapShare))
+
+        viewModel.delegate = self
+        viewModel.fetchEpisodeData()
     }
 
     private func addConstraint(){
@@ -50,4 +53,13 @@ final class RMEpisodeDetailViewController: UIViewController {
     private func didTapShare() {
 
     }
+}
+
+// MARK: - Delegate
+
+extension RMEpisodeDetailViewController: RMEpisodeDetailViewViewModelDelegate {
+    func didFetchEpisodeDetails() {
+        detailView.configure(with: viewModel)
+    }
+
 }
