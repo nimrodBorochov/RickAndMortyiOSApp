@@ -8,7 +8,7 @@
 import Foundation
 
 struct RMSettingsViewViewModel {
-    let cellViewModels: [RMSettingsCellViewViewModel]
+    let cellViewModels: [RMSettingsCellViewModel]
 
     
 }

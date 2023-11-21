@@ -1,5 +1,5 @@
 //
-//  RMSettingsCellViewViewModel.swift
+//  RMSettingsCellViewModel.swift
 //  RickAndMorty
 //
 //  Created by Nimrod Borochov on 20/11/2023.
@@ -7,15 +7,16 @@
 
 import UIKit
 
-struct RMSettingsCellViewViewModel: Identifiable {
+struct RMSettingsCellViewModel: Identifiable {
     let id = UUID()
 
-    private let type: RMSettingsOption
-
+    public let type: RMSettingsOption
+    public let onTapHandler: (RMSettingsOption) -> Void
     // MARK: - Init
 
-    init(type: RMSettingsOption) {
+    init(type: RMSettingsOption, onTapHandler: @escaping (RMSettingsOption) -> Void) {
         self.type = type
+        self.onTapHandler = onTapHandler
     }
 
     // MARK: - Public
