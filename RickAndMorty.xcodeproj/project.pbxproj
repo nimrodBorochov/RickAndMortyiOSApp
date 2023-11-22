@@ -24,6 +24,8 @@
 		F34EFFC32ACDFB3C009595B5 /* RMCharacterEpisodeCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34EFFC22ACDFB3C009595B5 /* RMCharacterEpisodeCollectionViewCellViewModel.swift */; };
 		F34EFFC52ACF0ADC009595B5 /* RMEpisodeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34EFFC42ACF0ADC009595B5 /* RMEpisodeDetailViewController.swift */; };
 		F34EFFC72ACF0D7F009595B5 /* RMAPICacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34EFFC62ACF0D7F009595B5 /* RMAPICacheManager.swift */; };
+		F36E5DA12B0DF3D7000F0D1B /* RMLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36E5DA02B0DF3D7000F0D1B /* RMLocationView.swift */; };
+		F36E5DA42B0DF809000F0D1B /* RMLocationViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36E5DA32B0DF809000F0D1B /* RMLocationViewViewModel.swift */; };
 		F3CF56762ACAE4A4006F59DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CF56752ACAE4A4006F59DC /* AppDelegate.swift */; };
 		F3CF56782ACAE4A4006F59DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CF56772ACAE4A4006F59DC /* SceneDelegate.swift */; };
 		F3CF567F2ACAE4A5006F59DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3CF567E2ACAE4A5006F59DC /* Assets.xcassets */; };
@@ -77,6 +79,8 @@
 		F34EFFC22ACDFB3C009595B5 /* RMCharacterEpisodeCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMCharacterEpisodeCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
 		F34EFFC42ACF0ADC009595B5 /* RMEpisodeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMEpisodeDetailViewController.swift; sourceTree = "<group>"; };
 		F34EFFC62ACF0D7F009595B5 /* RMAPICacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMAPICacheManager.swift; sourceTree = "<group>"; };
+		F36E5DA02B0DF3D7000F0D1B /* RMLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMLocationView.swift; sourceTree = "<group>"; };
+		F36E5DA32B0DF809000F0D1B /* RMLocationViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMLocationViewViewModel.swift; sourceTree = "<group>"; };
 		F3CF56722ACAE4A4006F59DC /* RickAndMorty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickAndMorty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3CF56752ACAE4A4006F59DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3CF56772ACAE4A4006F59DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -182,6 +186,22 @@
 			path = CharactersDetails;
 			sourceTree = "<group>";
 		};
+		F36E5D9F2B0DF3AB000F0D1B /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				F36E5DA02B0DF3D7000F0D1B /* RMLocationView.swift */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		F36E5DA22B0DF7F9000F0D1B /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				F36E5DA32B0DF809000F0D1B /* RMLocationViewViewModel.swift */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
 		F3CF56692ACAE4A4006F59DC = {
 			isa = PBXGroup;
 			children = (
@@ -234,6 +254,7 @@
 		F3CF568B2ACAE4E7006F59DC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F36E5D9F2B0DF3AB000F0D1B /* Location */,
 				F3F4DCF72B0B4E4C00A3DF16 /* SwiftUI */,
 				F31CDE312B0758A80095235C /* EpisodeDetails */,
 				F31CDE282B03A9B40095235C /* Episode */,
@@ -247,6 +268,7 @@
 		F3CF568C2ACAE4EC006F59DC /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				F36E5DA22B0DF7F9000F0D1B /* Location */,
 				F3F4DCF02B0B3DF900A3DF16 /* Settings */,
 				F31CDE342B0759430095235C /* EpisodeDetails */,
 				F34EFFBD2ACDFAEB009595B5 /* CharactersDetails */,
@@ -462,6 +484,7 @@
 				F3CF56A42ACB09AC006F59DC /* RMRequest.swift in Sources */,
 				F3CF56B42ACC1677006F59DC /* RMCharacterListViewViewModel.swift in Sources */,
 				F34EFFBC2ACDFAD7009595B5 /* RMCharacterEpisodeCollectionViewCell.swift in Sources */,
+				F36E5DA12B0DF3D7000F0D1B /* RMLocationView.swift in Sources */,
 				F3CF56A02ACAE559006F59DC /* RMEpisodeViewController.swift in Sources */,
 				F31CDE2C2B03BBA00095235C /* RMEpisodeListViewViewModel.swift in Sources */,
 				F34EFFC72ACF0D7F009595B5 /* RMAPICacheManager.swift in Sources */,
@@ -469,6 +492,7 @@
 				F31CDE2E2B03BF550095235C /* RMGetAllEpisodesResponse.swift in Sources */,
 				F31CDE252B0372860095235C /* RMEpisodeDetailViewViewModel.swift in Sources */,
 				F3CF56C12ACC71F4006F59DC /* RMCharacterDetailView.swift in Sources */,
+				F36E5DA42B0DF809000F0D1B /* RMLocationViewViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -615,6 +639,8 @@
 				DEVELOPMENT_TEAM = T52NLA8Y9D;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RickAndMorty/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Rick & Morty";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -643,6 +669,8 @@
 				DEVELOPMENT_TEAM = T52NLA8Y9D;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RickAndMorty/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Rick & Morty";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
