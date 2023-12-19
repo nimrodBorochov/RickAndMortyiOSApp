@@ -67,6 +67,7 @@
 		F3CF56C12ACC71F4006F59DC /* RMCharacterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CF56C02ACC71F4006F59DC /* RMCharacterDetailView.swift */; };
 		F3CF56C32ACC7211006F59DC /* RMCharacterDetailViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CF56C22ACC7211006F59DC /* RMCharacterDetailViewViewModel.swift */; };
 		F3CF56C52ACC9D03006F59DC /* RMFooterLoadingCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CF56C42ACC9D03006F59DC /* RMFooterLoadingCollectionReusableView.swift */; };
+		F3F2C6042B31866F00FB4EBE /* RMSearchOptionsPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F2C6032B31866F00FB4EBE /* RMSearchOptionsPickerViewController.swift */; };
 		F3F4DCF22B0B3E2B00A3DF16 /* RMSettingsViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F4DCF12B0B3E2B00A3DF16 /* RMSettingsViewViewModel.swift */; };
 		F3F4DCF42B0B3E8C00A3DF16 /* RMSettingsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F4DCF32B0B3E8C00A3DF16 /* RMSettingsCellViewModel.swift */; };
 		F3F4DCF62B0B407200A3DF16 /* RMSettingsOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F4DCF52B0B407200A3DF16 /* RMSettingsOption.swift */; };
@@ -136,6 +137,7 @@
 		F3CF56C02ACC71F4006F59DC /* RMCharacterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMCharacterDetailView.swift; sourceTree = "<group>"; };
 		F3CF56C22ACC7211006F59DC /* RMCharacterDetailViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMCharacterDetailViewViewModel.swift; sourceTree = "<group>"; };
 		F3CF56C42ACC9D03006F59DC /* RMFooterLoadingCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMFooterLoadingCollectionReusableView.swift; sourceTree = "<group>"; };
+		F3F2C6032B31866F00FB4EBE /* RMSearchOptionsPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMSearchOptionsPickerViewController.swift; sourceTree = "<group>"; };
 		F3F4DCF12B0B3E2B00A3DF16 /* RMSettingsViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMSettingsViewViewModel.swift; sourceTree = "<group>"; };
 		F3F4DCF32B0B3E8C00A3DF16 /* RMSettingsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMSettingsCellViewModel.swift; sourceTree = "<group>"; };
 		F3F4DCF52B0B407200A3DF16 /* RMSettingsOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMSettingsOption.swift; sourceTree = "<group>"; };
@@ -255,6 +257,15 @@
 				F36E5DAE2B1090E3000F0D1B /* RMLocationDetailView.swift */,
 			);
 			path = LocationDetails;
+			sourceTree = "<group>";
+		};
+		F3B101A72B31881E0055DFF0 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				F31CDE2F2B03DCAF0095235C /* RMSearchViewController.swift */,
+				F3F2C6032B31866F00FB4EBE /* RMSearchOptionsPickerViewController.swift */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 		F3CF56692ACAE4A4006F59DC = {
@@ -407,9 +418,9 @@
 		F3CF56BD2ACC703D006F59DC /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				F3B101A72B31881E0055DFF0 /* Search */,
 				F3CF56BE2ACC7143006F59DC /* RMCharacterDetailViewController.swift */,
 				F34EFFC42ACF0ADC009595B5 /* RMEpisodeDetailViewController.swift */,
-				F31CDE2F2B03DCAF0095235C /* RMSearchViewController.swift */,
 				F36E5DAB2B108ED0000F0D1B /* RMLocationDetailViewController.swift */,
 			);
 			path = Other;
@@ -539,6 +550,7 @@
 				F3CF56B82ACC1D26006F59DC /* Extensions.swift in Sources */,
 				F31891ED2B2EED36002D5D2D /* RMSearchView.swift in Sources */,
 				F3CF56A22ACB0984006F59DC /* RMService.swift in Sources */,
+				F3F2C6042B31866F00FB4EBE /* RMSearchOptionsPickerViewController.swift in Sources */,
 				F34EFFBF2ACDFB1C009595B5 /* RMCharacterPhotoCollectionViewCellViewModel.swift in Sources */,
 				F3CF56B22ACB645C006F59DC /* RMGetAllCharactersResponse.swift in Sources */,
 				F3F4DCF42B0B3E8C00A3DF16 /* RMSettingsCellViewModel.swift in Sources */,

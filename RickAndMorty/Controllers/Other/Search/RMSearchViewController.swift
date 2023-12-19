@@ -61,15 +61,23 @@ final class RMSearchViewController: UIViewController {
         view.backgroundColor = .systemBackground
         view.addSubview(searchView)
         addConstraints()
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Search",
-                                                            style: .done,
-                                                            target: self,
-                                                            action: #selector(didTapSearch()))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            title: "Search",
+            style: .done,
+            target: self,
+            action: #selector(didTapSearch)
+        )
+        searchView.delegate = self
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        searchView.presentKeyboard()  
     }
 
     @objc
     private func didTapSearch() {
-//        viewModel.executeSearch()
+//        viewModel.executeSearch() 
     }
 
     private func addConstraints() {
@@ -79,5 +87,17 @@ final class RMSearchViewController: UIViewController {
             searchView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor),
             searchView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
         ])
+    }
+}
+
+// MARK: - RMSearchViewDelegate
+
+extension RMSearchViewController: RMSearchViewDelegate {
+    func rmSearchView(_ searchView: RMSearchView, didSelectOption option: RMSearchInputViewViewModel.DynamicOption) {
+        let vc = RMSearchOptionsPickerViewController(option: option) { selection in
+            print("did select \(selection))
+        }
+        vc.sheetPresentationController?.detents = [.medium()]
+        present(vc, animated: true)
     }
 }
